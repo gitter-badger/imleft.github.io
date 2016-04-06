@@ -65,7 +65,7 @@
 1.创建创建Dropbox应用首先，需要创建一个Dropbox应用，可以从该网址进行创建：https://www.dropbox.com/developers/apps/create。">
 <meta property="og:image" content="http://left-10003311.file.myqcloud.com/blogpic/QQ%E5%9B%BE%E7%89%8720160406155940.png">
 <meta property="og:image" content="http://left-10003311.file.myqcloud.com/blogpic/dropbox_uploader1.png">
-<meta property="og:updated_time" content="2016-04-06T08:31:02.866Z">
+<meta property="og:updated_time" content="2016-04-06T09:09:11.584Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VPS自动备份到Dropbox">
 <meta name="twitter:description" content="本文所讲内容为如何将VPS上的文件以及数据库中的内容定时自动备份到Dropbox上。  
@@ -357,7 +357,7 @@ echo -e &quot;Backup Done!&quot;
 <p>设置的是Dropbox保留7天，本地保留10天</p>
 <p>接下来，为这个备份脚本增加执行权限：</p>
 <pre><code># chmod +x backup.sh
-</code></pre><h2 id="4-添加crontab"><a href="#4-添加crontab" class="headerlink" title="4.添加crontab"></a><strong>4.添加crontab</strong></h2><p>crontab –e，添加：  </p>
+</code></pre><h2 id="4-添加crontab"><a href="#4-添加crontab" class="headerlink" title="4.添加crontab"></a><strong>4.添加crontab</strong></h2><p>crontab -e，添加：  </p>
 <pre><code>30 3 * * * /root/bin/backup.sh
 </code></pre><p>首次运行可能要选编辑器</p>
 <p>这样，就可以每天凌晨3：30自动备份到Dropbox了。</p>
