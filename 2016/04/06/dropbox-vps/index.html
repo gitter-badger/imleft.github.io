@@ -39,7 +39,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="oneDrive," />
+  <meta name="keywords" content="Dropbox,VPS," />
 
 
 
@@ -55,19 +55,25 @@
 
 
 
-<meta name="description" content="开始菜单处右键打开命令提示符（管理员），输入命令：
-mklink /d C:\path\to\OneDrive\文件夹名 f:\文件夹名">
+<meta name="description" content="本文所讲内容为如何将VPS上的文件以及数据库中的内容定时自动备份到Dropbox上。  
+1. 创建创建Dropbox应用
+首先，需要创建一个Dropbox应用，可以从该网址进行创建：https://www.dropbox.com/developers/apps/create。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="oneDrive使用mklink命令自动同步本地文件夹">
-<meta property="og:url" content="http://www.left.im/2016/04/04/oneDrive/index.html">
+<meta property="og:title" content="VPS自动备份到Dropbox">
+<meta property="og:url" content="http://www.left.im/2016/04/06/dropbox-vps/index.html">
 <meta property="og:site_name" content="心の左">
-<meta property="og:description" content="开始菜单处右键打开命令提示符（管理员），输入命令：
-mklink /d C:\path\to\OneDrive\文件夹名 f:\文件夹名">
-<meta property="og:updated_time" content="2016-04-05T05:48:42.948Z">
+<meta property="og:description" content="本文所讲内容为如何将VPS上的文件以及数据库中的内容定时自动备份到Dropbox上。  
+1. 创建创建Dropbox应用
+首先，需要创建一个Dropbox应用，可以从该网址进行创建：https://www.dropbox.com/developers/apps/create。">
+<meta property="og:image" content="http://left-10003311.file.myqcloud.com/blogpic/QQ%E5%9B%BE%E7%89%8720160406155940.png">
+<meta property="og:image" content="http://left-10003311.file.myqcloud.com/blogpic/dropbox_uploader1.png">
+<meta property="og:updated_time" content="2016-04-06T08:17:15.076Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="oneDrive使用mklink命令自动同步本地文件夹">
-<meta name="twitter:description" content="开始菜单处右键打开命令提示符（管理员），输入命令：
-mklink /d C:\path\to\OneDrive\文件夹名 f:\文件夹名">
+<meta name="twitter:title" content="VPS自动备份到Dropbox">
+<meta name="twitter:description" content="本文所讲内容为如何将VPS上的文件以及数据库中的内容定时自动备份到Dropbox上。  
+1. 创建创建Dropbox应用
+首先，需要创建一个Dropbox应用，可以从该网址进行创建：https://www.dropbox.com/developers/apps/create。">
+<meta name="twitter:image" content="http://left-10003311.file.myqcloud.com/blogpic/QQ%E5%9B%BE%E7%89%8720160406155940.png">
 
 
 
@@ -85,7 +91,7 @@ mklink /d C:\path\to\OneDrive\文件夹名 f:\文件夹名">
   };
 </script>
 
-  <title> oneDrive使用mklink命令自动同步本地文件夹 | 心の左 </title>
+  <title> VPS自动备份到Dropbox | 心の左 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -215,7 +221,7 @@ mklink /d C:\path\to\OneDrive\文件夹名 f:\文件夹名">
             
             
               
-                oneDrive使用mklink命令自动同步本地文件夹
+                VPS自动备份到Dropbox
               
             
           </h1>
@@ -227,8 +233,8 @@ mklink /d C:\path\to\OneDrive\文件夹名 f:\文件夹名">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-04T21:32:18+08:00" content="2016-04-04">
-              2016-04-04
+            <time itemprop="dateCreated" datetime="2016-04-06T15:40:01+08:00" content="2016-04-06">
+              2016-04-06
             </time>
           </span>
 
@@ -257,8 +263,8 @@ mklink /d C:\path\to\OneDrive\文件夹名 f:\文件夹名">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/04/oneDrive/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/04/oneDrive/" itemprop="commentsCount"></span>
+                <a href="/2016/04/06/dropbox-vps/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/06/dropbox-vps/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -280,9 +286,88 @@ mklink /d C:\path\to\OneDrive\文件夹名 f:\文件夹名">
       
 
       
-        <p>开始菜单处右键打开命令提示符（管理员），输入命令：</p>
-<pre><code>mklink /d C:\path\to\OneDrive\文件夹名 f:\文件夹名
-</code></pre>
+        <p>本文所讲内容为如何将VPS上的文件以及数据库中的内容定时自动备份到Dropbox上。  </p>
+<h1 id="1-创建创建Dropbox应用"><a href="#1-创建创建Dropbox应用" class="headerlink" title="1. 创建创建Dropbox应用"></a>1. 创建创建Dropbox应用</h1><hr>
+<p>首先，需要创建一个Dropbox应用，可以从该网址进行创建：<a href="https://www.dropbox.com/developers/apps/create" target="_blank" rel="external">https://www.dropbox.com/developers/apps/create</a>。<br><a id="more"></a><br><img src="http://left-10003311.file.myqcloud.com/blogpic/QQ%E5%9B%BE%E7%89%8720160406155940.png" alt=""></p>
+<ol>
+<li>选择Dropbox API  </li>
+<li>App folder  </li>
+<li>命名应用  <h1 id="2-下载并执行dropbox-uploader-sh"><a href="#2-下载并执行dropbox-uploader-sh" class="headerlink" title="2.下载并执行dropbox_uploader.sh"></a>2.下载并执行dropbox_uploader.sh</h1></li>
+</ol>
+<hr>
+<p>dropbox_uploader是一个第三方Dropbox备份脚本，我们可以从这里获取到：<a href="https://raw.github.com/andreafabrizi/Dropbox-Uploader/master/dropbox_uploader.sh" target="_blank" rel="external">dropbox_uploade</a>。</p>
+<p>然后，为该脚本添加执行权限：<br><figure class="highlight plain"><figcaption><span>chmod +x dropbox_uploader.sh```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">执行该脚本：  </span><br><span class="line">```# ./dropbox_uploader.sh</span><br></pre></td></tr></table></figure></p>
+<p>根据提示输入Dropbox应用中的App key和App secret，许可类型选择a，确认y，复制给出的权限验证链接到浏览器，确认后回到终端按任意键完成。  </p>
+<p><img src="http://left-10003311.file.myqcloud.com/blogpic/dropbox_uploader1.png" alt=""></p>
+<h1 id="3-编写备份脚本"><a href="#3-编写备份脚本" class="headerlink" title="3.编写备份脚本"></a>3.编写备份脚本</h1><hr>
+<p>编写定时备份脚本，取名为backup.sh。其代码如下：</p>
+<pre><code>#!/bin/bash
+
+# MYSQL数据库帐号密码
+MYSQL_USR=&quot;usr&quot;  # 数据库帐号
+MYSQL_PWD=&quot;pwd&quot;  # 数据库密码
+
+# 定义需要备份的目录
+NGINX_CONF_DIR=/usr/local/nginx/conf  # nginx配置目录
+WEB_DIR=/home/wwwroot  # 网站数据存放目录
+
+# 定义备份存放目录
+DROPBOX_DIR=/$(date +%Y-%m-%d)  # Dropbox上的备份目录
+LOCAL_BAK_DIR=/home/backup  # 本地备份文件存放目录
+
+# 定义备份文件名称
+DBBakName=DB_$(date +%Y%m%d).tar.gz
+NginxConfBakName=NginxConf_$(date +%Y%m%d).tar.gz
+WebBakName=Web_$(date +%Y%m%d).tar.gz
+
+# 定义旧数据名称
+Old_DROPBOX_DIR=/$(date -d -7day +%Y-%m-%d)
+OldDBBakName=DB_$(date -d -10day +%Y%m%d).tar.gz
+OldNginxConfBakName=NginxConf_$(date -d -10day +%Y%m%d).tar.gz
+OldWebBakName=Web_$(date -d -10day +%Y%m%d).tar.gz
+
+cd $LOCAL_BAK_DIR
+
+#使用命令导出SQL数据库,并且按数据库分个压缩
+for db in `mysql -u$MYSQL_USR -p$MYSQL_PWD -B -N -e &apos;SHOW DATABASES&apos; | xargs`; do
+    (mysqldump -u$MYSQL_USR -p$MYSQL_PWD &apos;wordpress&apos; | gzip -9 - &gt; wordpress.sql.gz)
+done
+
+#压缩数据库文件合并为一个压缩文件
+tar zcf $LOCAL_BAK_DIR/$DBBakName $LOCAL_BAK_DIR/*.sql.gz
+rm -rf $LOCAL_BAK_DIR/*.sql.gz
+
+#压缩Nginx配置数据
+cd $NGINX_CONF_DIR
+tar zcf $LOCAL_BAK_DIR/$NginxConfBakName ./*
+
+#压缩网站数据
+cd $WEB_DIR
+tar zcf $LOCAL_BAK_DIR/$WebBakName ./*
+
+cd /root
+#开始上传
+./dropbox_uploader.sh upload $LOCAL_BAK_DIR/$DBBakName $DROPBOX_DIR/$DBBakName
+./dropbox_uploader.sh upload $LOCAL_BAK_DIR/$NginxConfBakName $DROPBOX_DIR/$NginxConfBakName
+./dropbox_uploader.sh upload $LOCAL_BAK_DIR/$WebBakName $DROPBOX_DIR/$WebBakName
+
+#删除旧数据
+rm -rf $LOCAL_BAK_DIR/$OldDBBakName $LOCAL_BAK_DIR/$OldNginxConfBakName $LOCAL_BAK_DIR/$OldWebBakName
+./dropbox_uploader.sh delete $Old_DROPBOX_DIR/
+
+echo -e &quot;Backup Done!&quot;
+</code></pre><p>这里我只备份wordpress这一个数据库.</p>
+<p>设置的是Dropbox保留7天，本地保留10天</p>
+<p>接下来，为这个备份脚本增加执行权限：</p>
+<pre><code># chmod +x backup.sh
+</code></pre><h1 id="4-添加crontab"><a href="#4-添加crontab" class="headerlink" title="4.添加crontab"></a>4.添加crontab</h1><hr>
+<p>crontab –e，添加：  </p>
+<pre><code>30 3 * * * /root/bin/backup.sh
+</code></pre><p>首次运行可能要选编辑器</p>
+<p>这样，就可以每天凌晨3：30自动备份到Dropbox了。</p>
+<h1 id="5-Reference"><a href="#5-Reference" class="headerlink" title="5.Reference"></a>5.Reference</h1><hr>
+<p>本文内容引用至<a href="http://www.pythoner.com/324.html" target="_blank" rel="external">http://www.pythoner.com/324.html</a></p>
+
       
     </div>
 
@@ -296,7 +381,9 @@ mklink /d C:\path\to\OneDrive\文件夹名 f:\文件夹名">
       
         <div class="post-tags">
           
-            <a href="/tags/oneDrive/" rel="tag">#oneDrive</a>
+            <a href="/tags/Dropbox/" rel="tag">#Dropbox</a>
+          
+            <a href="/tags/VPS/" rel="tag">#VPS</a>
           
         </div>
       
@@ -305,17 +392,13 @@ mklink /d C:\path\to\OneDrive\文件夹名 f:\文件夹名">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/04/夏目漱石-我是猫/" rel="next" title="夏目漱石 我是猫 第一章">
-                <i class="fa fa-chevron-left"></i> 夏目漱石 我是猫 第一章
+              <a href="/2016/04/04/oneDrive/" rel="next" title="oneDrive使用mklink命令自动同步本地文件夹">
+                <i class="fa fa-chevron-left"></i> oneDrive使用mklink命令自动同步本地文件夹
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/04/06/dropbox-vps/" rel="prev" title="VPS自动备份到Dropbox">
-                VPS自动备份到Dropbox <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -341,8 +424,8 @@ mklink /d C:\path\to\OneDrive\文件夹名 f:\文件夹名">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/04/04/oneDrive/"
-           data-title="oneDrive使用mklink命令自动同步本地文件夹" data-url="http://www.left.im/2016/04/04/oneDrive/">
+      <div class="ds-thread" data-thread-key="2016/04/06/dropbox-vps/"
+           data-title="VPS自动备份到Dropbox" data-url="http://www.left.im/2016/04/06/dropbox-vps/">
       </div>
     
   </div>
@@ -438,7 +521,7 @@ mklink /d C:\path\to\OneDrive\文件夹名 f:\文件夹名">
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-创建创建Dropbox应用"><span class="nav-number">1.</span> <span class="nav-text">1. 创建创建Dropbox应用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-下载并执行dropbox-uploader-sh"><span class="nav-number">2.</span> <span class="nav-text">2.下载并执行dropbox_uploader.sh</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-编写备份脚本"><span class="nav-number">3.</span> <span class="nav-text">3.编写备份脚本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-添加crontab"><span class="nav-number">4.</span> <span class="nav-text">4.添加crontab</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-Reference"><span class="nav-number">5.</span> <span class="nav-text">5.Reference</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
