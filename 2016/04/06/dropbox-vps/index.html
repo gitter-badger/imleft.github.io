@@ -56,20 +56,20 @@
 
 
 <meta name="description" content="本文所讲内容为如何将VPS上的文件以及数据库中的内容定时自动备份到Dropbox上。  
-1. 创建创建Dropbox应用首先，需要创建一个Dropbox应用，可以从该网址进行创建：https://www.dropbox.com/developers/apps/create。">
+1.创建创建Dropbox应用首先，需要创建一个Dropbox应用，可以从该网址进行创建：https://www.dropbox.com/developers/apps/create。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="VPS自动备份到Dropbox">
 <meta property="og:url" content="http://www.left.im/2016/04/06/dropbox-vps/index.html">
 <meta property="og:site_name" content="心の左">
 <meta property="og:description" content="本文所讲内容为如何将VPS上的文件以及数据库中的内容定时自动备份到Dropbox上。  
-1. 创建创建Dropbox应用首先，需要创建一个Dropbox应用，可以从该网址进行创建：https://www.dropbox.com/developers/apps/create。">
+1.创建创建Dropbox应用首先，需要创建一个Dropbox应用，可以从该网址进行创建：https://www.dropbox.com/developers/apps/create。">
 <meta property="og:image" content="http://left-10003311.file.myqcloud.com/blogpic/QQ%E5%9B%BE%E7%89%8720160406155940.png">
 <meta property="og:image" content="http://left-10003311.file.myqcloud.com/blogpic/dropbox_uploader1.png">
-<meta property="og:updated_time" content="2016-04-06T08:25:21.773Z">
+<meta property="og:updated_time" content="2016-04-06T08:31:02.866Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VPS自动备份到Dropbox">
 <meta name="twitter:description" content="本文所讲内容为如何将VPS上的文件以及数据库中的内容定时自动备份到Dropbox上。  
-1. 创建创建Dropbox应用首先，需要创建一个Dropbox应用，可以从该网址进行创建：https://www.dropbox.com/developers/apps/create。">
+1.创建创建Dropbox应用首先，需要创建一个Dropbox应用，可以从该网址进行创建：https://www.dropbox.com/developers/apps/create。">
 <meta name="twitter:image" content="http://left-10003311.file.myqcloud.com/blogpic/QQ%E5%9B%BE%E7%89%8720160406155940.png">
 
 
@@ -284,14 +284,13 @@
 
       
         <p>本文所讲内容为如何将VPS上的文件以及数据库中的内容定时自动备份到Dropbox上。  </p>
-<h2 id="1-创建创建Dropbox应用"><a href="#1-创建创建Dropbox应用" class="headerlink" title="1. 创建创建Dropbox应用"></a><strong>1. 创建创建Dropbox应用</strong></h2><p>首先，需要创建一个Dropbox应用，可以从该网址进行创建：<a href="https://www.dropbox.com/developers/apps/create" target="_blank" rel="external">https://www.dropbox.com/developers/apps/create</a>。<br><a id="more"></a><br><img src="http://left-10003311.file.myqcloud.com/blogpic/QQ%E5%9B%BE%E7%89%8720160406155940.png" alt=""></p>
+<h2 id="1-创建创建Dropbox应用"><a href="#1-创建创建Dropbox应用" class="headerlink" title="1.创建创建Dropbox应用"></a><strong>1.创建创建Dropbox应用</strong></h2><p>首先，需要创建一个Dropbox应用，可以从该网址进行创建：<a href="https://www.dropbox.com/developers/apps/create" target="_blank" rel="external">https://www.dropbox.com/developers/apps/create</a>。<br><a id="more"></a><br><img src="http://left-10003311.file.myqcloud.com/blogpic/QQ%E5%9B%BE%E7%89%8720160406155940.png" alt=""></p>
 <ol>
 <li>选择Dropbox API  </li>
 <li>App folder  </li>
-<li>命名应用<br><strong>2.下载并执行dropbox_uploader.sh</strong></li>
+<li>命名应用  </li>
 </ol>
-<hr>
-<p>dropbox_uploader是一个第三方Dropbox备份脚本，我们可以从这里获取到：<a href="https://raw.github.com/andreafabrizi/Dropbox-Uploader/master/dropbox_uploader.sh" target="_blank" rel="external">dropbox_uploade</a>。</p>
+<h2 id="2-下载并执行dropbox-uploader-sh"><a href="#2-下载并执行dropbox-uploader-sh" class="headerlink" title="2.下载并执行dropbox_uploader.sh"></a><strong>2.下载并执行dropbox_uploader.sh</strong></h2><p>dropbox_uploader是一个第三方Dropbox备份脚本，我们可以从这里获取到：<a href="https://raw.github.com/andreafabrizi/Dropbox-Uploader/master/dropbox_uploader.sh" target="_blank" rel="external">dropbox_uploade</a>。</p>
 <p>然后，为该脚本添加执行权限：  </p>
 <pre><code># chmod +x dropbox_uploader.sh
 </code></pre><p>执行该脚本：  </p>
@@ -517,7 +516,7 @@ echo -e &quot;Backup Done!&quot;
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-创建创建Dropbox应用"><span class="nav-number">1.</span> <span class="nav-text">1. 创建创建Dropbox应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-编写备份脚本"><span class="nav-number">2.</span> <span class="nav-text">3.编写备份脚本  </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-添加crontab"><span class="nav-number">3.</span> <span class="nav-text">4.添加crontab</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Reference"><span class="nav-number">4.</span> <span class="nav-text">5.Reference</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-创建创建Dropbox应用"><span class="nav-number">1.</span> <span class="nav-text">1.创建创建Dropbox应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-下载并执行dropbox-uploader-sh"><span class="nav-number">2.</span> <span class="nav-text">2.下载并执行dropbox_uploader.sh</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-编写备份脚本"><span class="nav-number">3.</span> <span class="nav-text">3.编写备份脚本  </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-添加crontab"><span class="nav-number">4.</span> <span class="nav-text">4.添加crontab</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Reference"><span class="nav-number">5.</span> <span class="nav-text">5.Reference</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
